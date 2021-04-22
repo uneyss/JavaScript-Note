@@ -1,0 +1,23 @@
+.text-primary{
+    color: blue;
+}
+
+.text-danger{
+    color: red;
+}
+
+.font-small{
+    font-size: small;
+}
+
+.font-medium{
+    font-size: medium;
+}
+
+.font-large{
+    font-size: large;
+}
+
+.text-center{
+    text-align: center;
+}
