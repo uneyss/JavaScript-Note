@@ -5,7 +5,9 @@
 .text-danger{
     color: red;
 }
-
+.text-success{
+    color: green;
+}
 .font-small{
     font-size: small;
 }
