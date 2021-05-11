@@ -79,7 +79,7 @@ element = document.querySelectorAll(".list-group-item") // Node List dönüyor. 
 element.forEach(function(el){
     console.log(el)
 })
-console.log("Elemenet Section",element)
+console.log("Elemenet Section", element)
 
 
 
@@ -90,14 +90,14 @@ const style = document.querySelector("#clear-todos")
 
 // Elementlerin özellikler
 /* 
-console.log("Style Section",style.id)
-console.log("Style Section",style.className)
-console.log("Style Section",style.classList)
-console.log("Style Section",style.classList[0])
-console.log("Style Section",style.textContent)
-console.log("Style Section",style.innerHTML)
-console.log("Style Section",style.href)
-console.log("Style Section",style.style) 
+console.log("Style Section", style.id)
+console.log("Style Section", style.className)
+console.log("Style Section", style.classList)
+console.log("Style Section", style.classList[0])
+console.log("Style Section", style.textContent)
+console.log("Style Section", style.innerHTML)
+console.log("Style Section", style.href)
+console.log("Style Section", style.style) 
 */
 
 
@@ -133,4 +133,50 @@ element2.forEach(function(el){
     el.style.background = "#ccc" 
     el.style.color = "red" 
 })
-console.log("Element 2",element2)
+console.log("Element 2", element2)
+
+
+
+/* Element üzerinde gezinme */
+
+let values
+const todoList = document.querySelector(".list-group")
+const todo = document.querySelector(".list-group-item:nth-child(2)")
+const cardrow = document.querySelector(".card.row")
+
+values = todoList
+values = todo
+values = cardrow
+
+// Child Nodes -Text Dahil
+values = todoList.childNodes
+values = todoList.childNodes[0]
+
+// Children - Element
+values = todoList.children
+values = todoList.children[0]
+values = todoList.children[todoList.children.length - 1]
+values = todoList.children[2].textContent = "Değişti"
+
+values = cardrow
+values = cardrow.children
+values = cardrow.children[2].children[1].textContent = "Burası da değişti"
+
+values = todoList
+values = todoList.firstElementChild
+values = todoList.lastElementChild
+values = todoList.children.length
+values = todoList.childElementCount
+
+// Parent Seçme 
+values = cardrow
+values = cardrow.parentElement
+values = cardrow.parentElement.parentElement
+
+// Element Kardeşleri 
+values = todo
+values = todo.previousElementSibling
+values = todo.nextElementSibling
+values = todo.nextElementSibling.nextElementSibling
+values = todo.previousElementSibling.previousElementSibling
+console.log("Child Section", values)
