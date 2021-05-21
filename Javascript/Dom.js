@@ -180,3 +180,87 @@ values = todo.nextElementSibling
 values = todo.nextElementSibling.nextElementSibling
 values = todo.previousElementSibling.previousElementSibling
 console.log("Child Section", values)
+
+
+
+// Dinamik Bir Şekilde Yeni Element Oluşturma 
+{/* <a id = "clear-todos" class="btn btn-dark" href="#">Tüm Taskları Temizleyin</a>    */}    
+
+const newLink = document.createElement("a")
+const cardBody = document.getElementsByClassName("card-body")[1]
+
+newLink.id = "clear-todos"
+newLink.className = "btn btn-danger"
+newLink.href = "https://www.google.com.tr"
+newLink.target = "_blank"
+newLink.appendChild(document.createTextNode("Farklı Sayfaya Git"))
+
+cardBody.appendChild(newLink)
+console.log("newLink",newLink)
+
+// Text Content 
+// newLink.textContent = "Farklı sayfaya git" Çok sağlıklı bir yöntem değil. Çünkü tüm elementler silinir ve sadece yazılıan element eklenir.
+
+// Text Node
+
+/* 
+const text = document.createTextNode("Naber")
+cardBody.appendChild(text)
+console.log('card body', cardBody) 
+*/
+
+// Dinamik Bir Şekilde Element Silme
+
+const todoList2 = document.querySelector("ul.list-group")
+const todos = document.querySelectorAll("li.list-group-item")
+
+// Remove Metodu 
+
+// todos[1].remove()
+// todoList2.removeChild(todoList2.lastElementChild)
+// todoList2.removeChild(todos[3])
+
+console.log("Todos",todos)
+console.log("Todo List 2",todoList2)
+
+// REPLACE 
+
+const cardBody2 = document.querySelectorAll(".card-body")[1]
+
+const newElement = document.createElement("h3")
+
+newElement.className = "card-tittle"
+newElement.id = "tasks-tittle"
+newElement.textContent = "Yeni Todolar"
+
+// Eski Element 
+
+const oldElement = document.querySelector("#tasks-tittle")
+/* cardBody2.replaceChild(newElement, oldElement)
+ */
+
+
+
+// Dinamik Attribute Değiştirme - Silme - Ekleme
+
+const todoInput = document.getElementById("todo")
+let elememnt 
+
+element = todoInput
+element = todoInput.classList.length
+
+/* todoInput.classList.add("newClass")
+todoInput.classList.add("newClass2")
+todoInput.classList.remove("form-control") */
+
+element = todoInput
+element = todoInput.placeholder
+element = todoInput.getAttribute("placeholder")
+element = todoInput.setAttribute("placeholder", "Naber")
+element = todoInput.setAttribute("tittle", "Input")
+element = todoInput.remove("name")
+
+element = todoInput
+/* element = todoInput.hasAttribute("name") */
+
+console.log("Element todo",element)
