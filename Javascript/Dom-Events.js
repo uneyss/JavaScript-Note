@@ -42,6 +42,7 @@ function changeText(e){
 
 
 
+
 // keypress Shift yukarı yön tuşları vb. görmüyor
 
 /* document.addEventListener("keypress", run)
