@@ -24,7 +24,6 @@ function formSubmit_2(event){
 }
 
 
-
 // Last Form
 let userFormDOM = document.querySelector('#lastForm')
 userFormDOM.addEventListener('submit', formHandler)
